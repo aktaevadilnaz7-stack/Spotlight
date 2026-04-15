@@ -1,0 +1,107 @@
+/* 1. CSS Variables (:root) */
+:root {
+    --bg-black: #121212;
+    --card-bg: #181818;
+    --spotify-pink: #ff4d8d;
+    --text-white: #ffffff;
+    --text-gray: #b3b3b3;
+    --main-font: 'Poppins', sans-serif;
+}
+
+/* Base Styles */
+* { margin: 0; padding: 0; box-box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-family: var(--main-font);
+    line-height: 1.6;
+}
+
+/* 2. Layout: Header with Flexbox */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: sticky; /* Positioning technique */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--spotify-pink); }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-white);
+    transition: 0.3s;
+}
+
+nav a:hover { color: var(--spotify-pink); }
+
+/* 3. Layout: Grid for Artists/Albums */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 40px 5%;
+}
+
+.artist-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.artist-card:hover {
+    transform: scale(1.05); /* Hover effect */
+    background-color: #282828;
+}
+
+.artist-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%; /* Круглые фото как в Spotify */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* 4. Pseudo-class :nth-child() for Table */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) { background-color: #1a1a1a; } /* Zebra stripes */
+
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #333; }
+th { color: var(--spotify-pink); }
+
+/* 5. Responsive Design (Media Queries) */
+@media (max-width: 992px) {
+    header { flex-direction: column; gap: 15px; }
+    .responsive-title { font-size: 2rem; }
+}
+
+@media (max-width: 576px) {
+    nav ul { flex-direction: column; align-items: center; }
+    .grid-container { grid-template-columns: 1fr; }
+}
+
+/* Footer */
+footer {
+    padding: 40px 5%;
+    text-align: center;
+    background-color: #000;
+    margin-top: 50px;
+}
