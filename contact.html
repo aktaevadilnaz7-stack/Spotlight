@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | BlackPink Spotify</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-form {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #181818;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid var(--spotify-pink);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: #000;
+            border: 1px solid #333;
+            color: white;
+        }
+        button {
+            background: var(--spotify-pink);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">BP-SPOTIFY</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="albums.html">Albums</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" style="color: #ff4d8d;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+        <div class="contact-form">
+            <h2 class="text-center mb-4">Request a Playlist</h2>
+            <form>
+                <label>Name:</label>
+                <input type="text" placeholder="Your Name" required>
+                <label>Email:</label>
+                <input type="email" placeholder="Email Address" required>
+                <label>Message:</label>
+                <textarea rows="5" placeholder="Which artist should we add?"></textarea>
+                <button type="submit">SEND REQUEST</button>
+            </form>
+        </div>
+    </main>
+    <footer><p>© 2026 Dilnaz DJ-2503 | Midterm Project</p></footer>
+</body>
+</html>
